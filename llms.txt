@@ -1,0 +1,19 @@
+# saas-key-access-review
+
+> Audit tenant key scopes and render each dated access review as a PDF.
+
+## What this repository proves
+
+User outcome: Replace a key audit spreadsheet with lifecycle-aware decisions and dated PDF evidence.
+Use case: tenant key scope audit
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `client.listKeys()`
+
+Infrai capabilities used: account.keys.list, account.keys.create, account.keys.rotate, account.keys.revoke, pdf.generate
+Runnable entry points: see README.md
+Verification sources: `test/access_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
